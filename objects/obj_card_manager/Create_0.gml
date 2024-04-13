@@ -1,0 +1,1 @@
+scr_card_manager_init()

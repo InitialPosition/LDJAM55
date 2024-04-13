@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"Infobox",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"Infobox",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

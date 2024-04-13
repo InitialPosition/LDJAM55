@@ -1,0 +1,1 @@
+scr_playable_card_hide_hint()
