@@ -58,8 +58,92 @@ function scr_card_manager_init() {
 	hand_player = array_create(0)
 	hand_opponent = array_create(0)
 	
-	atk_played = false
-	def_played = false
+	global.filter_player = true
+	
+	atk_played = noone
+	def_played = noone
+	atk_played_opponent = noone
+	def_played_opponent = noone
+	
+	find = function(_card, _deck) {
+		var _current_card_index
+		var _current_card
+		var _deck_length = array_length(_deck)
+		
+		for (_current_card_index = 0; _current_card_index < _deck_length; _current_card_index++) {
+			_current_card = array_get(_deck, _current_card_index)
+			
+			if _current_card.card_id == _card.card_id {
+				return true
+			}
+		}
+		
+		return false
+	}
+	
+	filter_func = function(_element, _index) {
+		if global.filter_player {
+			if typeof(_element) == "ref" {
+				// we are dealing with the actual playable cards
+				if obj_card_manager.atk_played != noone {
+					if _element.card_id == obj_card_manager.atk_played.card_id {
+						return false
+					}
+				}
+				if obj_card_manager.def_played != noone {
+					if _element.card_id == obj_card_manager.def_played.card_id {
+						return false
+					}
+				}
+				
+				return true
+			}
+			
+			// otherwise, we deal with structs in the player hand
+			if obj_card_manager.atk_played != noone {
+				if _element[VALUES.ID] == obj_card_manager.atk_played.card_id {
+					return false
+				}
+			}
+			if obj_card_manager.def_played != noone {
+				if _element[VALUES.ID] == obj_card_manager.def_played.card_id {
+					return false
+				}
+			}
+			
+			return true
+		}
+		
+		if typeof(_element) == "ref" {
+				// we are dealing with the actual playable cards
+				if obj_card_manager.atk_played_opponent != noone {
+					if _element.card_id == obj_card_manager.atk_played_opponent.card_id {
+						return false
+					}
+				}
+				if obj_card_manager.def_played_opponent != noone {
+					if _element.card_id == obj_card_manager.def_played_opponent.card_id {
+						return false
+					}
+				}
+				
+				return true
+			}
+			
+			// otherwise, we deal with structs in the opponents hand
+			if obj_card_manager.atk_played_opponent != noone {
+				if _element[VALUES.ID] == obj_card_manager.atk_played_opponent.card_id {
+					return false
+				}
+			}
+			if obj_card_manager.def_played_opponent != noone {
+				if _element[VALUES.ID] == obj_card_manager.def_played_opponent.card_id {
+					return false
+				}
+			}
+			
+			return true
+	}
 }
 
 function scr_card_manager_get_deck_at(_deck, _position) {

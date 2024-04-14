@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_tally",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":2.276271,
+  "name":"snd_tally",
+  "parent":{
+    "name":"Cards",
+    "path":"folders/Sounds/Cards.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_tally.wav",
+  "type":1,
+  "volume":0.1,
+}

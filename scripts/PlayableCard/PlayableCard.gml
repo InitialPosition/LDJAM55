@@ -38,6 +38,10 @@ function scr_playable_card_load_stats(_id, _card_stats = noone) {
 		_card_stats = scr_card_manager_get_card(_id)
 	}
 	
+	if typeof(_card_stats) == "number" {
+		_card_stats = scr_card_manager_get_card(_id)
+	}
+	
 	value = _card_stats[VALUES.VALUE]
 	suit = _card_stats[VALUES.SUIT]
 	damage_modifier = _card_stats[VALUES.DAMAGE_MODIFIER]
@@ -79,33 +83,40 @@ function scr_playable_card_update() {
 }
 
 function scr_playable_card_click() {
+	if !playable {
+		return
+	}
+	
 	if not in_play {
 		if suit == CARD_SUIT.HEARTS or suit == CARD_SUIT.DIAMONDS {
-			if !obj_card_manager.atk_played {
+			if obj_card_manager.atk_played == noone {
 				target_y -= 80
 				in_play = true
 		
-				obj_card_manager.atk_played = true
+				obj_card_manager.atk_played = self
 			}
 		} else {
-			if !obj_card_manager.def_played {
+			if obj_card_manager.def_played == noone {
 				target_y -= 80
 				in_play = true
 		
-				obj_card_manager.def_played = true
+				obj_card_manager.def_played = self
 			}
 		}
+		
+		audio_play_sound(snd_card_select, 1, 0)
+		
 	} else {
 		if suit == CARD_SUIT.HEARTS or suit == CARD_SUIT.DIAMONDS {
 			target_y += 80
 			in_play = false
 		
-			obj_card_manager.atk_played = false
+			obj_card_manager.atk_played = noone
 		} else {
 			target_y += 80
 			in_play = false
 		
-			obj_card_manager.def_played = false
+			obj_card_manager.def_played = noone
 		}
 	}
 }

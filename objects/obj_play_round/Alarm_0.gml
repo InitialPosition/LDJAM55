@@ -1,0 +1,1 @@
+scr_play_calculate_new_hp()
