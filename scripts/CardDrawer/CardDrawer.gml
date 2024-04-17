@@ -97,7 +97,6 @@ function scr_card_drawer_init() {
 		scr_card_manager_add_card_to_deck(scr_card_manager_get_card(42), deck, INSERTION_POSITION.RANDOM)
 		scr_card_manager_add_card_to_deck(scr_card_manager_get_card(43), deck, INSERTION_POSITION.RANDOM)
 		scr_card_manager_add_card_to_deck(scr_card_manager_get_card(21), deck, INSERTION_POSITION.RANDOM)
-		scr_card_manager_add_card_to_deck(scr_card_manager_get_card(43), deck, INSERTION_POSITION.RANDOM)
 		
 	} else {
 		obj_info.player_handsize = 6

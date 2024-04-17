@@ -105,6 +105,7 @@
     {"id":{"name":"snd_leemon_talk_8","path":"sounds/snd_leemon_talk_8/snd_leemon_talk_8.yy",},},
     {"id":{"name":"snd_leemon_talk_9","path":"sounds/snd_leemon_talk_9/snd_leemon_talk_9.yy",},},
     {"id":{"name":"snd_tally","path":"sounds/snd_tally/snd_tally.yy",},},
+    {"id":{"name":"snd_silent","path":"sounds/snd_silent/snd_silent.yy",},},
     {"id":{"name":"spr_atk","path":"sprites/spr_atk/spr_atk.yy",},},
     {"id":{"name":"spr_background_fg","path":"sprites/spr_background_fg/spr_background_fg.yy",},},
     {"id":{"name":"spr_background","path":"sprites/spr_background/spr_background.yy",},},

@@ -80,6 +80,7 @@
     {"name":"snd_leemon_talk_8","order":7,"path":"sounds/snd_leemon_talk_8/snd_leemon_talk_8.yy",},
     {"name":"snd_leemon_talk_9","order":8,"path":"sounds/snd_leemon_talk_9/snd_leemon_talk_9.yy",},
     {"name":"snd_tally","order":2,"path":"sounds/snd_tally/snd_tally.yy",},
+    {"name":"snd_silent","order":11,"path":"sounds/snd_silent/snd_silent.yy",},
     {"name":"spr_atk","order":6,"path":"sprites/spr_atk/spr_atk.yy",},
     {"name":"spr_background","order":1,"path":"sprites/spr_background/spr_background.yy",},
     {"name":"spr_bg_main_1","order":2,"path":"sprites/spr_bg_main_1/spr_bg_main_1.yy",},

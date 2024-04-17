@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_leemon_talk_8",
+  "%Name":"snd_silent",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":5.799184,
-  "name":"snd_leemon_talk_8",
+  "duration":0.052245,
+  "name":"snd_silent",
   "parent":{
     "name":"Leemon",
     "path":"folders/Sounds/Leemon.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_leemon_talk_8.mp3",
-  "type":1,
-  "volume":0.1,
+  "soundFile":"snd_silent.mp3",
+  "type":0,
+  "volume":1.0,
 }
